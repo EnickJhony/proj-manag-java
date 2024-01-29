@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.dev.enick.projmanag.modules.project.ProjectEntity;
+import jakarta.validation.Valid;
 
 
 @RestController
@@ -15,7 +16,7 @@ public class ProjectController {
 
 
   @PostMapping("/")
-  public void create(@RequestBody ProjectEntity projectEntity) {
+  public void create(@Valid @RequestBody ProjectEntity projectEntity) {
     System.out.println("projeto criado");
     System.out.println(projectEntity);
   }
