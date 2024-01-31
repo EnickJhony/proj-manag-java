@@ -20,4 +20,7 @@ public class ProjectService {
     projectRepository.save(projectEntity);
   }
 
+  public void delete(Long id) {
+    projectRepository.deleteById(id);
+  }
 }
