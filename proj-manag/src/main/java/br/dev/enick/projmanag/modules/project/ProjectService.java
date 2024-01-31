@@ -14,5 +14,10 @@ public class ProjectService {
   public List<ProjectEntity> findAll() {
     return (List<ProjectEntity>) projectRepository.findAll();
   }
+  
+  @SuppressWarnings("null")
+  public void create(ProjectEntity projectEntity) {
+    projectRepository.save(projectEntity);
+  }
 
 }
